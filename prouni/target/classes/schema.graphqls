@@ -1,0 +1,25 @@
+type Query {
+    getMunicipioBeneficiario(nomeCursoBolsa: String, racaBeneficiarioBolsa: String, sexoBeneficiarioBolsa: String): [Prouni]
+    getCodigoIES(anoConcessaoBolsa: Int, racaBeneficiarioBolsa: String, sexoBeneficiarioBolsa: String): [Prouni]
+    getNumberBolsas(nomeCursoBolsa: String, racaBeneficiarioBolsa: String, sexoBeneficiarioBolsa: String): Int
+}
+
+type Prouni {
+    anoConcessaoBolsa: Int!
+    codigoEMECIESBolsa: Int!
+    nomeIESBolsa: String!
+    municipio: String
+    campus: String
+    tipoBolsa: String!
+    modalidadeEnsinoBolsa: String!
+    nomeCursoBolsa: String!
+    nomeTurnoCursoBolsa: String
+    CPFBeneficiarioBolsa: String
+    sexoBeneficiarioBolsa: String
+    racaBeneficiarioBolsa: String
+    dtNascimentoBeneficiario: String
+    beneficiarioDeficienteFisico: String
+    regiaoBeneficiarioBolsa: String
+    siglaUFBeneficiarioBolsa: String
+    municipioBeneficiarioBolsa: String
+}
